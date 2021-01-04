@@ -30,23 +30,30 @@ p {
   justify-content: center;
 }
 
-.section > * {
+.section {
+  padding: 10em 0;
+  background: url(triangles.png) top right no-repeat;
+  box-shadow: inset  0  12px 12px -12px #777,
+    inset 0 -12px 12px -12px #777;
+}
+
+.section > div {
   margin-left: auto;
   margin-right: auto;
   width: 876px;
 }
 
-.section {
-  padding: 10em 0;
+.section > div > * {
+  width: 50%;
 }
 
 .primary {
-  background: #7B1E7A;
+  background: #7B1E7A url(noise.png) no-repeat;;
   color: #fff;
 }
 
 .secondary {
-  background: #B33F62;
+  background: #B33F62 url(pixels.png) no-repeat;
   color: #fff;
 }
 
@@ -56,6 +63,14 @@ p {
   border-right: 16px solid rgba(255, 255, 255, 0.75);
   animation: typewriter 2s steps(20, end) 1s 1 normal both,
     cursor 800ms steps(1, end) infinite;
+}
+
+.primary, .secondary {
+  box-shadow: none;
+}
+
+.primary > div, .secondary > div {
+  padding-left: 50%;
 }
 
 footer {
